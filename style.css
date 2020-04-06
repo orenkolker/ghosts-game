@@ -1,0 +1,138 @@
+body {
+    background: #aaaaaa;
+}
+#board {
+    background: #9fcaff;
+    display: flex;
+    flex-wrap: wrap;
+    width: 80vh;
+    margin: 130px auto;
+    border: 10px solid #555555;
+
+    
+}
+.my-turn div#board {
+    border: 10px solid green;
+}
+.place {
+    border: 1px solid;
+    flex-grow: 7;
+    padding-bottom: calc(100% / 6);
+    width: 16%;
+    position: relative;
+}
+.place.last-move {
+        box-shadow: inset 1px 1px 10px #000;
+}
+.ghost {
+    width: 50%;
+    position: absolute;
+    height: 50%;
+    top: 25%;
+    left: 25%;
+    background: #ffffff;
+    border-radius: 50%;
+    border: 1px solid;
+    cursor: pointer;
+    background: url(ghost.png);
+    background-size: 100%;
+}
+
+.ghost.top {
+    top: 125%;
+}
+.ghost.down {
+    top: -75%;
+}
+.ghost.right {
+    left: 125%;
+}
+.ghost.left {
+    left: -75%;
+}
+
+.ghost[color="blue"] {
+    background-color: blue;
+}
+.ghost[color="red"] {
+    background-color: red;
+}
+
+
+.corner {
+    background: #000213;
+}
+
+
+#ready {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    z-index: 2;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background: green;
+    font-size: 40px;
+    text-align: center;
+    width: 40%;
+    color: #fff;
+    text-decoration: none;
+    box-shadow: 5px 6px #024802;
+
+}
+
+div#status {
+    position: fixed;
+    background: #FFF;
+    top: 10px;
+    left: 0;
+    z-index: 55;
+    width: 400PX;
+    right: 0;
+    margin: auto;
+    PADDING: 10PX;
+    display: flex;
+    justify-content: space-around;
+    display: none;
+}
+
+#status .player {
+    font-size: 18px;
+    text-align: center;
+    border: 1px solid;
+    width: 170px;
+    display: inline-block;
+}
+
+#status .player  .colors {
+    display: flex;
+    justify-content: space-around;
+}
+.colors  .color {
+    border-radius: 50%;
+    width: 30px;
+    HEIGHT: 30px;
+    color: #fff;
+    margin: 5px;
+}
+
+.colors .red {
+    background: red;
+}
+.colors .blue {
+    background: blue;
+}
+
+
+div#joinroom {
+    background: #fff;
+    width: 50%;
+    margin: 100px auto;
+    padding: 50px;
+}
+
+button#join {
+    background: green;
+    color: #fff;
+}
