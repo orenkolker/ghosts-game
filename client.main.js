@@ -137,6 +137,7 @@ var socket = io.connect(location.origin);
      $(toPlace).html('')
      $(toPlace).addClass('last-move')
      $(board.getGhostElement(fromX,fromY)).appendTo(toPlace);
+    $('#ghost-walk')[0].play();
 /*
      $(board.getGhostElement(fromX,fromY)).addClass(dir); 
 
@@ -277,7 +278,7 @@ socket.on('gameStop', function (data) {
     window.board.turn = false;
     $('body').removeClass('my-turn');
     $('.last-move').removeClass('last-move')
-    
+     $('#ghost-walk')[0].play();
     socket.emit('move', {
       fromX: source_row,
       fromY: source_col,
