@@ -1,4 +1,4 @@
 # ghosts-game
 
 
-http://playghosts.herokuapp.com/
+http://playghosts.herokuapp.com/roomName
