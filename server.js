@@ -17,7 +17,11 @@ app.get('/:roomName/', function (req, res) {
     res.sendFile(__dirname + '/room.html');
 
 });
+app.get('/', function (req, res) {
+    
+    res.sendFile(__dirname + '/home.html');
 
+});
 
 
 io.on('connection', function (socket) {
