@@ -19,7 +19,7 @@ app.get('/:roomName/', function (req, res) {
 });
 app.get('/', function (req, res) {
     
-    res.sendFile(__dirname + '/home.html');
+    res.sendFile(__dirname + '/home.html' , {data:games, number:  rooms});
 
 });
 
