@@ -125,6 +125,8 @@ div#status {
 }
 
 
+
+div#createroom,
 div#joinroom {
     background: #fff;
     width: 50%;
@@ -132,6 +134,7 @@ div#joinroom {
     padding: 50px;
 }
 
+button#create,
 button#join {
     background: green;
     color: #fff;
