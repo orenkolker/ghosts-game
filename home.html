@@ -2,49 +2,43 @@
 <html>
   <head>
     <title>Ghosts</title>
-    <link rel="stylesheet" href="node_modules/skeleton-css/css/skeleton.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="node_modules/skeleton-css/css/skeleton.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
 
-
   <body>
-
     <div id="home">
-
       <div id="createroom">
-          <h3> Create   room!</h3>
-          
-          <input type="text" name="roomname" id="roomName" placeholder="Enter room name" required="">
-          <button id="create">Create room</button>
-          <br>
-        <a href="http://jchriscampbell.com/resources/downloads/ghosts-miltnobradley-instructions.pdf" target="_blank">Game Rules</a>
+        <h3>Create room!</h3>
+
+        <input type="text" name="roomname" id="roomName" placeholder="Enter room name" required="" />
+        <button id="create">Create room</button>
+        <br />
+        <a href="http://jchriscampbell.com/resources/downloads/ghosts-miltnobradley-instructions.pdf" target="_blank"
+          >Game Rules</a
+        >
       </div>
-      
-      
+    </div>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"
+      integrity="sha512-0bEtK0USNd96MnO4XhH8jhv3nyRF0eK87pJke6pkYf3cM0uDIhNJy9ltuzqgypoIFXw3JSuiy04tVk4AjpZdZw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" />
 
-
-  </div>
-
-
-      
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-      <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-
-      <script>
-        $('#create').on('click', function () {
-          var name = $('#roomName').val();
-          if (!name) {
-            alert('Please enter room name.');
-            return;
-          }
-          else {
-            window.location.href = "/" +name ;
-          }
-        });
-      </script>
-      
-     
-      
+    <script>
+      $('#create').on('click', function () {
+        var name = $('#roomName').val();
+        if (!name) {
+          alert('Please enter room name.');
+          return;
+        } else {
+          window.location.href = '/' + name;
+        }
+      });
+    </script>
   </body>
 </html>
